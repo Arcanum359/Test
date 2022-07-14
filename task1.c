@@ -161,7 +161,7 @@ int main()
             {
                 _PacketTransmit.preamble    = _PacketRecieve.preamble;
                 _PacketTransmit.cnt         = _PacketRecieve.cnt;
-                _PacketTransmit.type        = 0x01;
+                _PacketTransmit.type       	|= (1<<7);
                 _PacketTransmit.length      = _PacketRecieve.length;
                 for (int i = 0; i < 256; i++)
                 {
